@@ -107,10 +107,30 @@
     <div class="book-slider">
       <a class="book-prev" href=""><span class="visually-hidden">Назад</span></a>
       <ul class="book-list">
-        <li class="book-item"><a href="#" title="М.Такровский Енисей отпусти!"><img src="img/enisey-otpusti.jpg" width="179" height="265" alt="М.Такровский Енисей отпусти!"></a></li>
-        <li class="book-item"><a href="#" title="А.Нури Плененные тайной"><img src="img/nuri.jpg" width="179" height="265" alt="А.Нури Плененные тайной"></a></li>
-        <li class="book-item"><a href="#" title="О.Володарская Поединок с мечтой"><img src="img/poedinok-s-mechtoy.jpg" width="164" height="265" alt="О.Володарская Поединок с мечтой"></a></li>
-        <li class="book-item"><a href="#" title="Н.Рубцов Стихотворения"><img src="img/stihotvoreniya.jpg" width="187" height="265" alt="Н.Рубцов Стихотворения"></a></li>
+        <li class="book-item">
+          <a href="#" title="М.Такровский Енисей отпусти!">
+            <img src="img/enisey-otpusti.jpg" width="179" height="265" alt="М.Такровский Енисей отпусти!">
+            <div class="book-info">Енисей отпусти!<br>М.Такровский<br>156 стр.</div>
+          </a>
+        </li>
+        <li class="book-item">
+          <a href="#" title="А.Нури Плененные тайной">
+            <img src="img/nuri.jpg" width="179" height="265" alt="А.Нури Плененные тайной">
+            <div class="book-info">Плененные тайной<br>А.Нури<br>203 стр.</div>
+          </a>
+        </li>
+        <li class="book-item">
+          <a href="#" title="О.Володарская Поединок с мечтой">
+            <img src="img/poedinok-s-mechtoy.jpg" width="164" height="265" alt="О.Володарская Поединок с мечтой">
+            <div class="book-info">Поединок с мечтой<br>О.Володарская<br>246 стр.</div>
+          </a>
+        </li>
+        <li class="book-item">
+          <a href="#" title="Н.Рубцов Стихотворения">
+            <img src="img/stihotvoreniya.jpg" width="187" height="265" alt="Н.Рубцов Стихотворения">
+            <div class="book-info">Стихотворения<br>Н.Рубцов<br>102 стр.</div>
+          </a>
+        </li>
       </ul>
       <a class="book-next" href="#"><span class="visually-hidden">Вперед</span></a>
     </div>
@@ -220,9 +240,19 @@
         e-mail: dudbibl@rambler.ru
       </p>
     </div>
-    <div class="map"><a href="map.html"><img src="img/map.jpg" width="370" height="210" alt="Мы находимся здесь"></a></div>
+    <div class="map"><a id="js-view-map" href="map.html"><img src="img/map.jpg" width="370" height="210" alt="Мы находимся здесь"></a></div>
   </div>
 </footer>
+
+<div class="modal modal-map">
+  <h2 class="visually-hidden">Где мы находимся</h2>
+  <iframe src="https://yandex.ru/map-widget/v1/-/CBqYiLTKCB"></iframe>
+  <img src="img/map.jpg" width="960" height="560" alt="Мы находимся по адресу: г.Дудинка, ул.Матросова, д.8, корп.А">
+  <button class="modal-close map-close"><span class="visually-hidden">Закрыть карту</span></button>
+</div>
+
+<div class="overlay"></div>
+
 <script src="js/scripts.js"></script>
 </body>
 </html>

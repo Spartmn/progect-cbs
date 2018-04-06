@@ -38,3 +38,45 @@ document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(1)').onclic
 document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
   Calendar2("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)+1);
 }
+
+
+/*-Modal-Map-*/
+var link_map = document.querySelector("#js-view-map");
+var overlay = document.querySelector(".overlay");
+var modal_map = document.querySelector(".modal-map");
+var map_close = document.querySelector(".map-close");
+
+link_map.addEventListener("click", function (ev) {
+  ev.preventDefault();
+  modal_map.classList.add("modal-show");
+  overlay.classList.add("overlay-show");
+});
+
+
+map_close.addEventListener("click", function (ev) {
+  ev.preventDefault();
+  if (modal_map.classList.contains("modal-show"))
+  {
+    modal_map.classList.remove("modal-show");
+    overlay.classList.remove("overlay-show");
+  }
+});
+
+overlay.addEventListener("click", function (ev) {
+  ev.preventDefault();
+  if (modal_map.classList.contains("modal-show"))
+  {
+    modal_map.classList.remove("modal-show");
+    overlay.classList.remove("overlay-show");
+  }
+});
+
+window.addEventListener("keydown", function (ev) {
+  if (ev.keyCode === 27) {
+    if (modal_map.classList.contains("modal-show"))
+    {
+      modal_map.classList.remove("modal-show");
+      overlay.classList.remove("overlay-show");
+    }
+  }
+});
