@@ -1,3 +1,47 @@
+/*-TODO-FONTS-*/
+/* Код для подключения шрифта в /css/stylename.css */
+
+@font-face {
+  font-family: "HeliosCondRegular";
+  src: url("../fonts/HeliosCondRegular/HeliosCondRegular.eot");
+  src: url("../fonts/HeliosCondRegular/HeliosCondRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/HeliosCondRegular/HeliosCondRegular.woff") format("woff"),
+  url("../fonts/HeliosCondRegular/HeliosCondRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HeliosCondItalic";
+  src: url("../fonts/HeliosCondItalic/HeliosCondItalic.eot");
+  src: url("../fonts/HeliosCondItalic/HeliosCondItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/HeliosCondItalic/HeliosCondItalic.woff") format("woff"),
+  url("../fonts/HeliosCondItalic/HeliosCondItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HeliosCondBold";
+  src: url("../fonts/HeliosCondBold/HeliosCondBold.eot");
+  src: url("../fonts/HeliosCondBold/HeliosCondBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/HeliosCondBold/HeliosCondBold.woff") format("woff"),
+  url("../fonts/HeliosCondBold/HeliosCondBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HeliosCondBoldItalic";
+  src: url("../fonts/HeliosCondBoldItalic/HeliosCondBoldItalic.eot");
+  src: url("../fonts/HeliosCondBoldItalic/HeliosCondBoldItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/HeliosCondBoldItalic/HeliosCondBoldItalic.woff") format("woff"),
+  url("../fonts/HeliosCondBoldItalic/HeliosCondBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
 /*-TODO-BASE-PAGES*/
 img {
   max-width: 100%;
@@ -28,12 +72,12 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: Arial;
+  font-family: "HeliosCondRegular", Arial, sans-serif;
   font-size: 9px;
   color: #000000;
 
   /*background: linear-gradient(#88c4a0, #f3e5b6) no-repeat;*/
-  background: #dedede;
+  background: #dcdcdc;
 }
 
 /*-TODO-HEADER-*/
@@ -151,11 +195,15 @@ body {
 
 .logotype h1 {
   width: 1160px;
-  margin: 25px 0 0 -120px;
+  margin: 43px 0 0 -120px;
   padding: 0 60px;
   font-size: 2.5em;
   color: #000000;
   text-align: center;
+}
+
+.logotype h1 span {
+  font-size: 1.2em;
 }
 
 .main-nav {
@@ -166,8 +214,8 @@ body {
   content: "";
   display: block;
   width: 100%;
-  height: 50px;
-  background-color: #04264c;
+  height: 7px;
+  background-color: #2c609a;
 }
 
 .main-nav ul {
@@ -178,28 +226,32 @@ body {
 
 .menu-header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .menu-item {
   position: relative;
-  height: 45px;
+  height: 35px;
   margin-right: 10px;
   padding: 0 10px;
   color: #ffffff;
   text-align: center;
-  background-color: #04264c;
+  background-color: #2370b1;
   border-radius: 10px 10px 0 0;
+}
+
+.menu-item:nth-last-child(1) {
+  margin-right: 0;
 }
 
 .menu-item:hover {
   background-color: #0c99c8;
-  color: #000000;
+  color: #ddeaec;
 }
 
 .menu-item a {
   display: block;
-  padding: 15px;
+  padding: 3px 15px;
   text-decoration: none;
   color: inherit;
   font-size: 2.1em;
@@ -218,9 +270,10 @@ body {
   display: none;
   position: absolute;
   width: 100%;
-  top: 45px;
+  top: 35px;
   left: 0;
   padding: 0;
+  color: #ffffff;
   z-index: 5;
 }
 
@@ -252,16 +305,21 @@ body {
 }*/
 
 /*-TODO-MAIN-*/
+.main-section {
+  background-color: #ffffff;
+}
+
 .new-book {
-  height: 350px;
-  margin-bottom: 60px;
+  height: 310px;
+  margin-bottom: 40px;
   padding: 10px 20px;
-  background-color: #bbbf89;
+  background-color: #4575a5;
 }
 
 .new-book h2 {
-  font-size: 2em;
-  color: #000000;
+  font-size: 2.8em;
+  margin: 0 0 10px;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
 }
@@ -308,7 +366,7 @@ body {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  width: 900px;
+  width: 885px;
   list-style: none;
   overflow: hidden;
 }
@@ -340,7 +398,7 @@ body {
   position: relative;
   width: 135px;
   margin: 20px auto;
-  padding-left: 40px;
+  padding-left: 25px;
   font-size: 1.5em;
   text-align: center;
   font-weight: bold;
@@ -351,14 +409,14 @@ body {
   position: absolute;
   top: -5px;
   left: 0;
-  width: 30px;
-  height: 30px;
-  background-color: rgb(231, 140, 92);;
+  width: 22px;
+  height: 22px;
+  background-color: #e65d14;
 }
 
 /*-TODO-Calendar-BEGIN-*/
 #calendar {
-  /*width: 340px;*/
+  width: 215px;
   margin: 0 20px;
   line-height: 1.2em;
   border-collapse: collapse;
@@ -370,6 +428,7 @@ body {
 #calendar thead tr:nth-child(1) {
   height: 50px;
   background-color: #0c99c8;
+  border: 2px solid #0c99c8;
 }
 
 #calendar thead tr:last-child {
@@ -378,28 +437,38 @@ body {
 }
 
 #calendar thead tr:last-child td {
-  padding: 8px 0;
-  border: 1px solid #eeeeee;
+  padding: 3px 0;
+  border: 2px solid #afafaf;
+  font-weight: bold;
 }
 
 #calendar thead tr:nth-child(1) td:nth-child(2) {
-  color: #000000;
-  /*color: rgb(50, 50, 50);*/
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
 }
+
+#calendar thead tr:nth-child(1) td:nth-child(1),
+#calendar thead tr:nth-child(1) td:nth-child(3) {
+  color: #ffffff;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
 #calendar thead tr:nth-child(1) td:nth-child(1):hover, #calendar thead tr:nth-child(1) td:nth-child(3):hover {
   cursor: pointer;
 }
 
 #calendar tbody td {
-  padding: 8px;
+  padding: 5px;
   color: rgb(44, 86, 122);
-  border: 1px solid #eeeeee;
+  border: 2px solid #afafaf;
 }
 #calendar tbody td:nth-child(n+6), #calendar2 .holiday {
   color: rgb(220, 0, 0);
 }
 #calendar tbody td.today {
-  background: rgb(231, 140, 92);
+  background: #e65d14;
   font-weight: bold;
   color: #fff;
 }
@@ -409,7 +478,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 260px;
-  height: 340px;
   margin: 0 auto;
   text-align: center;
   font-size: 3em;
@@ -422,6 +490,9 @@ body {
 }
 
 .service-assessment p {
+  width: 140px;
+  margin: 0 auto;
+  font-size: 0.6em;
   font-weight: bold;
 }
 
@@ -437,6 +508,7 @@ body {
   margin: 0;
 }
 .news-list ul {
+  padding: 0;
   list-style: none;
 }
 
@@ -457,6 +529,11 @@ body {
   font-weight: bold;
 }
 
+.news-item img {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
 .news-item p {
   font-size: 1.8em;
   text-align: justify;
@@ -472,6 +549,8 @@ body {
 
 .resurs {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .resurs h3,
@@ -479,10 +558,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
+  height: 40px;
   margin: 0;
   padding: 0;
-  font-size: 3em;
+  font-size: 2.3em;
   color: #0c4897;
   text-align: center;
 }
@@ -495,36 +574,35 @@ body {
   color: transparent;
 }
 
-.resurs-static .resurs-list {
-  justify-content: center;
-}
-
 .resurs-dinamic {
   width: 100%;
+  height: 390px;
+  overflow: hidden;
 }
 
 .resurs-list {
   display: flex;
-  height: 200px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
   background-color: #ffffff;
-  overflow: hidden;
+  list-style: none;
 }
 
 .resurs-list ul {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   margin: 0;
   padding: 0;
 }
 
-.resurs-item {
-  list-style: none;
-}
-
-.resurs-item a {
+.resurs-item a{
   display: table-cell;
+  width: 130px;
+  height: 130px;
   vertical-align: middle;
-  height: 200px;
+  text-align: center;
 }
 
 .useful-link {
@@ -535,6 +613,9 @@ body {
 
 .link-list {
   background-color: #ffffff;
+  width: 100%;/*
+  height: 150px;*/
+  margin: 10px 0;
   overflow: hidden;
 }
 
@@ -542,19 +623,33 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 200px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
+.link-item a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 120px;
+}
+
+.link-item img {
+  width: auto;
+  height: 100%;
+}
 /*-TODO-FOOTER-*/
 .main-footer {
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
   padding: 20px;
   color: #ffffff;
   background-color: #636161;
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .adress-office {
@@ -563,7 +658,7 @@ body {
 
 .adress-office h2 {
   margin: 10px 0;
-  font-size: 3.6em;
+  font-size: 2.7em;
 }
 
 .adress-office p {
