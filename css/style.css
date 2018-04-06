@@ -377,21 +377,23 @@ body {
 
 .book-item img:hover + .book-info,
 .book-item .book-info:hover {
-  display: block;
+  height: 80px;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 
 .book-info {
-  display: none;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 80px;
+  height: 0px;
   padding: 10px;
   font-size: 2em;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
+  opacity: 0;
 }
 
 .events {
