@@ -7,9 +7,11 @@
   <title>Дудинская ЦБС - Главная страница</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/outline.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-pref.css">
 </head>
 <body>
+<div class="bg-img"></div>
+
 <header class="main-header container">
   <div class="access container">
     <dl class="a-fonsize">
@@ -35,7 +37,7 @@
     </dl>
   </div>
   <div class="top-nav">
-    <a class="not-to-see" href="">Версия для слабовидящих</a>
+    <a class="not-to-see" href=""><span>Версия для слабовидящих</span></a>
     <form class="header-form-search" action="search.html" method="get">
       <input class="header-search-field" type="search" id="search-field" name="search-field" placeholder="Поиск по сайту"
              aria-label="Поиск по сайту">
@@ -102,42 +104,63 @@
   </nav>
 </header>
 <main class="main-section container">
-  <section class="new-book">
+  <section class="new-book container">
     <h2>Новые поступления</h2>
     <div class="book-slider">
       <a class="book-prev" href=""><span class="visually-hidden">Назад</span></a>
-      <ul class="book-list">
-        <li class="book-item">
-          <a href="#" title="М.Такровский Енисей отпусти!">
-            <img src="img/enisey-otpusti.jpg" width="179" height="265" alt="М.Такровский Енисей отпусти!">
-            <div class="book-info">Енисей отпусти!<br>М.Такровский<br>156 стр.</div>
-          </a>
-        </li>
-        <li class="book-item">
-          <a href="#" title="А.Нури Плененные тайной">
-            <img src="img/nuri.jpg" width="179" height="265" alt="А.Нури Плененные тайной">
-            <div class="book-info">Плененные тайной<br>А.Нури<br>203 стр.</div>
-          </a>
-        </li>
-        <li class="book-item">
-          <a href="#" title="О.Володарская Поединок с мечтой">
-            <img src="img/poedinok-s-mechtoy.jpg" width="164" height="265" alt="О.Володарская Поединок с мечтой">
-            <div class="book-info">Поединок с мечтой<br>О.Володарская<br>246 стр.</div>
-          </a>
-        </li>
-        <li class="book-item">
-          <a href="#" title="Н.Рубцов Стихотворения">
-            <img src="img/stihotvoreniya.jpg" width="187" height="265" alt="Н.Рубцов Стихотворения">
-            <div class="book-info">Стихотворения<br>Н.Рубцов<br>102 стр.</div>
-          </a>
-        </li>
-      </ul>
+      <div class="book-overlay">
+        <ul class="book-list">
+          <li class="book-item">
+            <a href="#" title="М.Такровский Енисей отпусти!">
+              <img src="img/enisey-otpusti.jpg" width="179" height="265" alt="М.Такровский Енисей отпусти!">
+              <div class="book-info">Енисей отпусти!<br>М.Такровский<br>156 стр.</div>
+            </a>
+          </li>
+          <li class="book-item">
+            <a href="#" title="А.Нури Плененные тайной">
+              <img src="img/nuri.jpg" width="179" height="265" alt="А.Нури Плененные тайной">
+              <div class="book-info">Плененные тайной<br>А.Нури<br>203 стр.</div>
+            </a>
+          </li>
+          <li class="book-item">
+            <a href="#" title="О.Володарская Поединок с мечтой">
+              <img src="img/poedinok-s-mechtoy.jpg" width="164" height="265" alt="О.Володарская Поединок с мечтой">
+              <div class="book-info">Поединок с мечтой<br>О.Володарская<br>246 стр.</div>
+            </a>
+          </li>
+          <li class="book-item">
+            <a href="#" title="Н.Рубцов Стихотворения">
+              <img src="img/stihotvoreniya.jpg" width="187" height="265" alt="Н.Рубцов Стихотворения">
+              <div class="book-info">Стихотворения<br>Н.Рубцов<br>102 стр.</div>
+            </a>
+          </li>
+          <li class="book-item">
+            <a href="#" title="А.Бушков Чужие зеркала">
+              <img src="img/chugie-zerkala.jpg" width="179" height="265" alt="А.Бушков Чужие зеркала">
+              <div class="book-info">Чужие зеркала<br>А.Бушков<br>157 стр.</div>
+            </a>
+          </li>
+          <li class="book-item">
+            <a href="#" title="Э.Ершова Самая простая вещь на свете">
+              <img src="img/samaya-prostaya-vech-na-svete.jpg" width="166" height="265" alt="Э.Ершова Самая простая вещь на свете">
+              <div class="book-info">Самая простая вещь ...<br>Э.Ершова<br>232 стр.</div>
+            </a>
+          </li>
+          <li class="book-item">
+            <a href="#" title="Е.Вильмонт В пиосках сокровищ">
+              <img src="img/v-poiskah-socrovich.jpg" width="169" height="265" alt="Е.Вильмонт В пиосках сокровищ">
+              <div class="book-info">В пиосках сокровищ<br>Е.Вильмонт<br>187 стр.</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <a class="book-next" href="#"><span class="visually-hidden">Вперед</span></a>
     </div>
   </section>
-  <section class="events">
+  <section class="events container">
     <h2 class="visually-hidden">События</h2>
-    <aside class="left-colum">
+    <div class="left-colum">
       <div class="calendar-of-actions">
         <h3 class="visually-hidden">Календарь мероприятий</h3>
         <table id="calendar">
@@ -146,7 +169,7 @@
           <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
           <tbody>
         </table>
-        <p>дни мероприятий</p>
+        <p>в этот день</p>
       </div>
       <div class="resurs">
         <h2 class="visually-hidden">Электронные ресурсы</h2>
@@ -170,7 +193,7 @@
         <img src="img/plans.png" width="125" height="162" alt="Оцени НАС!">
         <p>Независимая оценка качества услуг библиотек</p>
       </a>
-    </aside>
+    </div>
     <div class="news-list">
       <h3 class="visually-hidden">Новости</h3>
       <ul>
@@ -215,7 +238,7 @@
       </ul>
     </div>
   </section>
-  <section class="useful-link">
+  <section class="useful-link container">
     <h2>Полезные ссылки</h2>
     <div class="link-list">
       <ul>
@@ -228,21 +251,20 @@
     </div>
   </section>
 </main>
-<footer class="main-footer">
-  <div class=" container">
-    <div class="foto-bibl"><img src="img/foto-cbs.jpg" width="319" height="210" alt="Фасад Центральной библиотеки"></div>
-    <div class="adress-office">
-      <h2>Наш адрес:</h2>
-      <p>Красноярский край,<br>
-        г. Дудинка ул. Матросова, 8 А<br>
-        тел. 8 (39191) 5-37-65,<br>
-        факс: 8 (39191) 5-33-66<br>
-        e-mail: dudbibl@rambler.ru
-      </p>
-    </div>
-    <div class="map"><a id="js-view-map" href="map.html"><img src="img/map.jpg" width="370" height="210" alt="Мы находимся здесь"></a></div>
+<footer class="main-footer container">
+  <div class="foto-bibl"><img src="img/foto-cbs.jpg" width="319" height="210" alt="Фасад Центральной библиотеки"></div>
+  <div class="adress-office">
+    <h2>Наш адрес:</h2>
+    <p>Красноярский край,<br>
+      г. Дудинка ул. Матросова, 8 А<br>
+      тел. 8 (39191) 5-37-65,<br>
+      факс: 8 (39191) 5-33-66<br>
+      e-mail: dudbibl@rambler.ru
+    </p>
   </div>
+  <div class="map"><a id="js-view-map" href="map.html"><img src="img/map.jpg" width="370" height="210" alt="Мы находимся здесь"></a></div>
 </footer>
+
 
 <div class="modal modal-map">
   <h2 class="visually-hidden">Где мы находимся</h2>
