@@ -401,6 +401,10 @@ body {
 }*/
 
 /*-TODO-MAIN-*/
+.main-wrapper {
+  background-color: #ffffff;
+}
+
 .main-section {
   background-color: #ffffff;
 }
