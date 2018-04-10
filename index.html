@@ -7,35 +7,47 @@
   <title>Дудинская ЦБС - Главная страница</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/outline.css">
-  <link rel="stylesheet" href="css/style-pref.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="bg-img"></div>
-
-<header class="main-header container">
-  <div class="access container">
-    <dl class="a-fonsize">
-      <dt>Размер шрифта:</dt>
-      <dd>
-        <a href="#" class="a-fontsize-small"></a>
-      </dd>
-      <dd>
-        <a href="#" class="a-fontsize-normal"></a>
-      </dd>
-      <dd>
-        <a href="#" class="a-fontsize-big"></a>
-      </dd>
-    </dl>
-    <dl class="a-colors">
-      <dt>Цвет сайта</dt>
-      <dd></dd>
-      <dd></dd>
-    </dl>
-    <dl class="a-images">
-      <dt>Изображение</dt>
-      <dd></dd>
-    </dl>
+<div class="access container">
+  <dl class="a-fontsize">
+    <dt>Размер шрифта:</dt>
+    <dd>
+      <a href="#" class="a-fontsize-small"></a>
+    </dd>
+    <dd>
+      <a href="#" class="a-fontsize-normal"></a>
+    </dd>
+    <dd>
+      <a href="#" class="a-fontsize-big"></a>
+    </dd>
+  </dl>
+  <dl class="a-fonttype">
+    <dt>Тип шрифта:</dt>
+    <dd>
+      <a href="#" class="a-fonttype-sans-serif"></a>
+    </dd>
+    <dd>
+      <a href="#" class="a-fonttype-serif"></a>
+    </dd>
+  </dl>
+  <dl class="a-colors">
+    <dt>Цвет сайта:</dt>
+    <dd><a class="a-bg-white" href="#"></a></dd>
+    <dd><a class="a-bg-black" href="#"></a></dd>
+  </dl>
+  <dl class="a-images">
+    <dt>Изображение:</dt>
+    <dd><a class="a-image-off" href="#"></a></dd>
+  </dl>
+  <div class="switch-version">
+    <a href="#">Обычная версия сайта</a>
   </div>
+</div>
+<header class="main-header container">
+
   <div class="top-nav">
     <a class="not-to-see" href=""><span>Версия для слабовидящих</span></a>
     <form class="header-form-search" action="search.html" method="get">
@@ -47,7 +59,6 @@
   <div class="logotype">
     <img class="logo-dudbibl" src="img/logo-dudbibl.png" width="121" height="95" alt="Логотип библиотеки">
     <h1>Муниципальное бюджетное учреждение культуры<br><span>«Дудинская централизованная библиотечная система»</span></h1>
-    <!--<img src="img/logo-dudinka.png" width="200" height="120 " alt="Логотип Дудинка">-->
   </div>
   <nav class="main-nav">
     <ul class="menu-header">
@@ -55,23 +66,26 @@
         <ul class="submenu">
           <li><a href="#">Общая информация </a></li>
           <li><a href="#">Центральная библиотека</a></li>
-          <li><a href="#">Бибилиотека семейного чтения</a></li>
+          <li><a href="#">Бибилиотека <br>семейного чтения</a></li>
           <li><a href="#">Городская библиотека им. Е.Е. Аксеновой</a></li>
+          <li><a href="#">Библиотека <br>п.Левинские Пески</a></li>
+          <li><a href="#">Библиотека <br>п.Хантайское Озеро</a></li>
+          <li><a href="#">Библиотека п.Усть-Авам</a></li>
+          <li><a href="#">Библиотека п.Волочанка</a></li>
+          <li><a href="#">Библиотека п.Потапово</a></li>
         </ul>
       </li>
       <li class="menu-item"><a href="#">Читателям</a>
         <ul class="submenu">
           <li><a href="#">Правила пользования</a></li>
           <li><a href="#">Положение о платных услугах</a></li>
-          <li><a href="#">Тарифы на платные услуги</a></li>
           <li><a href="#">Фотогалерея</a></li>
         </ul>
       </li>
       <li class="menu-item"><a href="#">Новости</a>
         <ul class="submenu">
           <li><a href="#">Афиша мероприятий</a></li>
-          <li><a href="#">Этот день  в истории</a></li>
-          <li><a href="#">Конкурсы (краевые, районные)</a></li>
+          <li><a href="#">Конкурсы</a></li>
         </ul>
       </li>
       <li class="menu-item"><a href="#">Услуги</a>
@@ -88,7 +102,7 @@
           <li><a href="#">Электронный каталог</a></li>
           <li><a href="#">Виртуальные выставки</a></li>
           <li><a href="#">Электронная  краеведческая библиотека</a></li>
-          <li><a href="#">Ресурсы удаленного доступа </a></li>
+          <li><a href="#">Ресурсы удаленного доступа</a></li>
         </ul>
       </li>
       <li class="menu-item"><a href="#">Документы</a>
@@ -98,6 +112,7 @@
           <li><a href="#">Отчет о результатах деятельности за прошедший год</a></li>
           <li><a href="#">Муниципальное задание</a></li>
           <li><a href="#">ПФХД на 2018 год</a></li>
+          <li><a href="#">Решение Городского Совета 'Об утверждении тарифов ...'</a></li>
         </ul>
       </li>
     </ul>
@@ -265,7 +280,6 @@
   <div class="map"><a id="js-view-map" href="map.html"><img src="img/map.jpg" width="370" height="210" alt="Мы находимся здесь"></a></div>
 </footer>
 
-
 <div class="modal modal-map">
   <h2 class="visually-hidden">Где мы находимся</h2>
   <iframe src="https://yandex.ru/map-widget/v1/-/CBqYiLTKCB"></iframe>
@@ -276,6 +290,7 @@
 <div class="overlay"></div>
 
 <script src="js/scripts.js"></script>
+<script src="js/access-see.js"></script>
 </body>
 </html>
 
