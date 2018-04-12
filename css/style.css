@@ -94,8 +94,8 @@ body {
 .access {
   display: none;
   justify-content: flex-start;
-  padding: 20px;
-  font-size: 18px;
+  padding: 20px 10px;
+  font-size: 16px;
   box-sizing: border-box;
   border: 1px solid #000000;
   background-color: #eeeeee;
@@ -190,7 +190,8 @@ body {
   background-position: 26px 0;
 }
 
-.a-fonttype-serif:hover {
+.a-fonttype-serif:hover,
+.a-fonttype-serif-check {
   background-position: 26px -31px;
 }
 
@@ -234,8 +235,16 @@ body {
   background-image: url("../img/check-images.png");
 }
 
-.a-images a {
+/*.a-images a:hover {
   background-position: 0 -27px;
+}*/
+
+.a-image-on {
+  background-position: 0 -27px;
+}
+
+.a-image-off {
+  background-position: 0 0;
 }
 
 .switch-version {
@@ -351,23 +360,24 @@ body {
 .logotype {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   min-height: 120px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 
 .logotype .logo-dudbibl {
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  left: 40px;
+  left: 40px;*/
   margin: 16px;
 }
 
 .logotype h1 {
-  width: 1160px;
+  /*width: 1160px;*/
   margin-top: 25px;
-  padding: 0 60px;
+  padding: 0 50px;
   font-size: 2.5em;
   color: #000000;
   text-align: center;
@@ -397,7 +407,7 @@ body {
 
 .menu-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   color: #ffffff;
   background-color: #2370b1;
@@ -406,6 +416,7 @@ body {
 .menu-item {
   position: relative;
   flex-grow: 1;
+  max-width: 282px;
   height: 35px;
   padding: 0 10px;
   text-align: center;
@@ -488,7 +499,7 @@ body {
 }
 
 .new-book {
-  height: 330px;
+  /*height: 330px;*/
   margin-bottom: 40px;
   padding: 10px 20px;
   color: #ffffff;
@@ -499,6 +510,7 @@ body {
 .new-book h2 {
   font-size: 2.8em;
   margin: 0 0 10px;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
 }
@@ -611,7 +623,7 @@ body {
 
 .calendar-of-actions p {
   position: relative;
-  width: 65px;
+  width: 80px;
   margin: 20px auto;
   padding-left: 35px;
   font-size: 1.5em;
@@ -791,6 +803,11 @@ body {
   text-align: center;
 }
 
+.new-book a,
+.useful-link a {
+  text-decoration: none;
+}
+
 .resurs-static {
   width: 100%; /*255px*/
 }
@@ -817,13 +834,14 @@ body {
 }
 
 .resurs-dinamic .resurs-list {
-  height: 520px;
+  /*height: 520px;*/
   animation: scroller 10s infinite;
 }
 
 .resurs-item a{
   display: table-cell;
   width: 130px;
+  margin: 1px 0;
   height: 130px;
   vertical-align: middle;
   text-align: center;
@@ -895,6 +913,11 @@ body {
   margin: 0;
   font-size: 1.8em;
   line-height: 1.5em;
+}
+
+.adress-office p a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .map {
@@ -1056,6 +1079,26 @@ iframe {
 
 /*-TODO-ACCESS-STYLE-*/
 
+/*-TODO-FONTSIZE-*/
+
+.fontsize-normal {
+  font-size: 13px;
+}
+
+.fontsize-big {
+  font-size: 16px;
+}
+
+/*-TODO-FONTTYPE-*/
+.fonttype-sans {
+  font-family: Arial, sans-serif;
+}
+
+.fonttype-serif {
+  font-family: "Times New Roman", serif;
+}
+
+
 /*-TODO-BG-COLOR*/
 html .bg-white .bg-style,
 html .bg-white .bg-style .menu-item:hover,
@@ -1109,12 +1152,13 @@ html .bg-black tr.bg-style {
   border: 1px solid #ffffff;
 }
 
-/*-TODO-FONTSIZE-*/
-
-.fontsize-normal {
-  font-size: 13px;
+/*-TODO-IMG-OFF*/
+.img-off img {
+  display: none;
 }
 
-.fontsize-big {
-  font-size: 16px;
+.img-off .resurs-dinamic,
+.img-off .resurs-item a,
+.img-off .link-item a {
+  height: 0;
 }
