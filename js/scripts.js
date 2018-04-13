@@ -80,3 +80,111 @@ window.addEventListener("keydown", function (ev) {
     }
   }
 });
+
+/*-TODO-STICKY-MENU-*/
+
+var main_menu = document.querySelector(".main-nav");
+
+window.onscroll = function() {
+  if (main_menu.getBoundingClientRect().top==0) {
+    console.log(main_menu.getBoundingClientRect().top);
+  }
+};
+
+$(document).ready(function() {
+
+  var navPos, winPos, navHeight;
+
+  function refreshVar() {
+    navPos = $('nav').offset().top;
+    navHeight = $('nav').outerHeight(true);
+  }
+
+  refreshVar();
+  $(window).resize(refreshVar);
+
+  $('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();
+
+  $(window).scroll(function() {
+    winPos = $(window).scrollTop();
+
+    if (winPos >= navPos) {
+      $('nav').addClass('main-fixed container');
+      $('.clone-nav').show();
+    }
+    else {
+      $('nav').removeClass('main-fixed container');
+      $('.clone-nav').hide();
+    }
+  });
+});
+
+/*-TODO-SLIDE-NEW-BOOK-*/
+
+var width = $('.book-item').width(),
+    book_next = document.querySelector(".book-next");
+    book_prev = document.querySelector(".book-prev");
+
+//dimensions
+$('.book-list>li').width(width);
+$('.book-list').width(width*$('.book-list>li').length);
+
+//positioning
+$('.book-list').css('left',-width);
+$('.book-list>li:last-child').prependTo('.book-list');
+
+//move slides forward
+function nextSlide() {
+  $('.book-list').animate({
+    'margin-left':-width
+  },500, function() {
+    $('.book-list>li:first-child').appendTo('.book-list');
+    $('.book-list').css('margin-left', 0);
+  });
+  }
+
+function prevSlide() {
+  $('.book-list').animate({
+    'margin-left':width
+  },500, function() {
+    $('.book-list>li:last-child').prependTo('.book-list');
+    $('.book-list').css('margin-left', 0);
+  });
+}
+
+book_prev.addEventListener("click", function (ev) {
+  ev.preventDefault();
+  clearInterval(interval_slade);
+  prevSlide();
+});
+
+book_next.addEventListener("click", function (ev) {
+  ev.preventDefault();
+  clearInterval(interval_slade);
+  nextSlide();
+});
+
+interval_slade = setInterval("nextSlide()",5000);
+
+/*-TODO-SLIDER-RESURS-*/
+
+var height = $('.resurs-item').height();
+
+//dimensions
+$('.resurs-dinamic>.resurs-list>li').height(height);
+$('.resurs-dinamic>.resurs-list').height(height*$('.resurs-dinamic>.resurs-list>li').length);
+
+//positioning
+$('.resurs-dinamic>.resurs-list').css('top',-height);
+$('.resurs-dinamic>.resurs-list>li:last-child').prependTo('.resurs-dinamic>.resurs-list');
+
+//move slides forward
+function nextSlideResurs() {
+  $('.resurs-dinamic>.resurs-list').animate({
+    'margin-top':-height
+  },500, function() {
+    $('.resurs-dinamic>.resurs-list>li:first-child').appendTo('.resurs-dinamic>.resurs-list');
+    $('.resurs-dinamic>.resurs-list').css('margin-top', 0);
+  });
+}
+interval_slade = setInterval("nextSlideResurs()",5000);

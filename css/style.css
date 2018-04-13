@@ -45,7 +45,6 @@
 /*-TODO-BASE-PAGES*/
 img {
   max-width: 100%;
-  /*height: auto;*/
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -75,7 +74,6 @@ body {
   font-family: "HeliosCondRegular", Arial, sans-serif;
   font-size: 9px;
   color: #000000;
-  /*background-color: #dcdcdc;*/
 }
 
 .bg-img {
@@ -137,7 +135,6 @@ body {
   position: relative;
   top: -5px;
   height: 31px;
-  /*margin-left: 5px;*/
   background-image: url("../img/fontsize.png");
 }
 
@@ -177,7 +174,6 @@ body {
   top: -5px;
   width: 26px;
   height: 34px;
-  /*margin-left: 5px;*/
   background-image: url("../img/fonttype.png");
 }
 
@@ -206,10 +202,6 @@ body {
   background-image: url("../img/colors.png");
 }
 
-.a-bg-white {
-  /*background-position: 0 0;*/
-}
-
 .a-bg-white:hover,
 .a-bg-white-check {
   background-position: 0 -31px;
@@ -235,10 +227,6 @@ body {
   background-image: url("../img/check-images.png");
 }
 
-/*.a-images a:hover {
-  background-position: 0 -27px;
-}*/
-
 .a-image-on {
   background-position: 0 -27px;
 }
@@ -261,7 +249,6 @@ body {
 }
 
 /*-TODO-HEADER-*/
-
 .main-header {
   display: flex;
   flex-direction: column;
@@ -276,7 +263,6 @@ body {
   right: 0;
   height: 40px;
   z-index: 1;
-  /*margin-bottom: 30px;*/
 }
 
 .top-nav .not-to-see {
@@ -341,11 +327,6 @@ body {
   display: initial;
 }
 
-/*.header-search-field:focus ^ .header-form-search {
-  border: 1px solid #000000;
-  border-radius: 3px;
-}*/
-
 .header-form-search input[type="submit"] {
   width: 17px;
   height: 17px;
@@ -368,14 +349,10 @@ body {
 }
 
 .logotype .logo-dudbibl {
-  /*position: absolute;
-  top: 0;
-  left: 40px;*/
   margin: 16px;
 }
 
 .logotype h1 {
-  /*width: 1160px;*/
   margin-top: 25px;
   padding: 0 50px;
   font-size: 2.5em;
@@ -389,6 +366,13 @@ body {
 
 .main-nav {
   margin-bottom: 20px;
+}
+
+.main-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .main-nav::after {
@@ -477,17 +461,10 @@ body {
 }
 
 .submenu a {
-  /*display: block;
-  width: 100%;
-  height: 100%;*/
   padding: 10px;
   font-size: 1.3em;
   line-height: 1.3em;
 }
-
-/*.submenu a:hover {
-  background-color: rgba(12, 153, 200, 1);
-}*/
 
 /*-TODO-MAIN-*/
 .main-wrapper {
@@ -499,7 +476,6 @@ body {
 }
 
 .new-book {
-  /*height: 330px;*/
   margin-bottom: 40px;
   padding: 10px 20px;
   color: #ffffff;
@@ -559,11 +535,9 @@ body {
 
 .book-list {
   display: flex;
-  /*justify-content: space-between;*/
   margin: 0;
   padding: 0;
   list-style: none;
-  animation: scroller-book 30s infinite;
 }
 
 .book-item {
@@ -606,7 +580,6 @@ body {
 .left-colum {
   display: flex;
   flex-direction: column;
-  /*width: 320px;*/
 }
 
 .calendar-of-actions {
@@ -652,7 +625,6 @@ body {
   background-color: #ffffff;
 }
 
-/*#calendar thead tr:nth-child(1)*/
 .calendar-title tr:nth-child(1)
 {
   height: 50px;
@@ -673,14 +645,12 @@ body {
 }
 
 #calendar thead tr:nth-child(1) td:nth-child(2) {
-  /*color: #ffffff;*/
   font-size: 1.2em;
   font-weight: bold;
 }
 
 #calendar thead tr:nth-child(1) td:nth-child(1),
 #calendar thead tr:nth-child(1) td:nth-child(3) {
-  /*color: #ffffff;*/
   font-size: 1.6em;
   font-weight: bold;
 }
@@ -822,7 +792,6 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  /*background-color: #ffffff;*/
   list-style: none;
 }
 
@@ -834,8 +803,8 @@ body {
 }
 
 .resurs-dinamic .resurs-list {
-  /*height: 520px;*/
-  animation: scroller 10s infinite;
+  /*height: 520px;
+  animation: scroller 10s infinite;*/
 }
 
 .resurs-item a{
@@ -850,15 +819,12 @@ body {
 .useful-link {
   display: flex;
   flex-direction: column;
-  /*margin-bottom: 35px;*/
   padding-bottom: 35px;
   background: #ffffff;
 }
 
 .link-list {
-  /*background-color: #ffffff;*/
-  width: 100%;/*
-  height: 150px;*/
+  width: 100%;
   margin: 10px 0;
   overflow: hidden;
 }
@@ -1011,21 +977,6 @@ iframe {
   display: block;
 }
 
-@-webkit-keyframes scroller {
-  0% {
-    transform: translateY(0);
-  }
-  33% {
-    transform: translateY(-130px);
-  }
-  66% {
-    transform: translateY(-260px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @keyframes scroller {
   0% {
     transform: translateY(0);
@@ -1038,24 +989,6 @@ iframe {
   }
   100% {
     transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes scroller-book {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-230px);
-  }
-  50% {
-    transform: translateX(-460px);
-  }
-  75% {
-    transform: translateX(-690px);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 
@@ -1097,7 +1030,6 @@ iframe {
 .fonttype-serif {
   font-family: "Times New Roman", serif;
 }
-
 
 /*-TODO-BG-COLOR*/
 html .bg-white .bg-style,
