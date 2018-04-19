@@ -137,7 +137,7 @@ $('.book-list>li:last-child').prependTo('.book-list');
 function nextSlide() {
   $('.book-list').animate({
     'margin-left':-width
-  },500, function() {
+  }, 500, "linear", function() {
     $('.book-list>li:first-child').appendTo('.book-list');
     $('.book-list').css('margin-left', 0);
   });
@@ -164,7 +164,10 @@ book_next.addEventListener("click", function (ev) {
   nextSlide();
 });
 
-interval_slade = setInterval("nextSlide()",5000);
+if ($('.book-list>li').length > 4) {
+  interval_slade = setInterval("nextSlide()",5000);
+}
+
 
 /*-TODO-SLIDER-RESURS-*/
 
